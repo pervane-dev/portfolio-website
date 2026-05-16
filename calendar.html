@@ -1,0 +1,28 @@
+import type { EventColor } from "../types";
+
+export const DAYS_SHORT   = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"] as const;
+export const MONTHS_LONG  = [
+  "January","February","March","April","May","June",
+  "July","August","September","October","November","December",
+] as const;
+
+/** Height of one hour slot in the weekly grid (px) */
+export const HOUR_HEIGHT_PX = 48;
+
+/** Max visible event pills per day cell in month view */
+export const MAX_VISIBLE_EVENTS_MONTH = 2;
+
+// ─── Tailwind class maps — single source of truth for colors ─────────────────
+export const EVENT_PILL_CLASSES: Record<EventColor, string> = {
+  purple: "bg-violet-100 text-violet-800",
+  teal:   "bg-teal-100   text-teal-800",
+  coral:  "bg-orange-100 text-orange-800",
+  blue:   "bg-blue-100   text-blue-800",
+};
+
+export const WEEK_EVENT_CLASSES: Record<EventColor, string> = {
+  purple: "bg-violet-100 text-violet-800 border-l-2 border-violet-400",
+  teal:   "bg-teal-100   text-teal-800   border-l-2 border-teal-400",
+  coral:  "bg-orange-100 text-orange-800 border-l-2 border-orange-400",
+  blue:   "bg-blue-100   text-blue-800   border-l-2 border-blue-400",
+};
